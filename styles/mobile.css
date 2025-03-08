@@ -1,0 +1,102 @@
+/* Estilos para telas menores (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Ajustes no cabeçalho */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustes na navegação */
+    nav {
+        max-width: 100%;
+        position: relative; /* Para posicionar o menu de hambúrguer corretamente */
+    }
+
+    #menu-toggle {
+        display: block; /* Mostra o botão de hambúrguer em telas menores */
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px;
+        cursor: pointer;
+        margin: 0 auto; /* Centraliza o botão */
+    }
+
+    .navigation {
+        display: none; /* Esconde o menu por padrão em telas menores */
+        flex-direction: column;
+        gap: 10px;
+        background-color: black; /* Fundo do menu */
+        padding: 10px;
+        position: absolute; /* Posiciona o menu sobre o conteúdo */
+        top: 100%; /* Abaixo do cabeçalho */
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    }
+
+    .navigation.show {
+        display: flex; /* Mostra o menu quando a classe "show" é adicionada */
+    }
+
+    .navigation a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ajustes no conteúdo principal */
+    main {
+        padding: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-learning-activities,
+    .card-information {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Ajustes no layout dos cursos */
+    .main-card {
+        padding: 10px;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card a {
+        width: 100%;
+    }
+
+    .course-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .course-row a {
+        width: 100%;
+    }
+
+    /* Ajustes no rodapé */
+    footer {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}

@@ -3,83 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Ludvig - WDD 230 - Web Frontend Development</title>
+    <title>Fernando Ludvig - WDD 231 - Web Frontend Development</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <meta name="description" content="WDD 230 - Web Frontend Development">
     <meta name="author" content="Fernando Ludvig">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
-
-    <!-- Updated Open Graph meta tags -->
-    <meta property="og:image" content="https://opengraph.githubassets.com/984ac90c6295c6e15acff77fcfadca614bcda153f612929d3005ffeaf6b2f3f7/fernandoludvig/wdd230">
-    <meta property="og:image:alt" content="Contribute to fernandoludvig/wdd230 development by creating an account on GitHub.">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
-    <meta property="og:site_name" content="GitHub">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="fernandoludvig/wdd230">
-    <meta property="og:url" content="https://github.com/fernandoludvig/wdd230">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 <body>
     <header>
         <img src="images/eu1.webp" alt="Profile Picture" loading="lazy">
         <span>Fernando Ludvig</span>
-        <img class="dark" src="images/dark-theme-svgrepo-com.png" alt="dark mode" id="darkBtn"> <!-- Dark mode toggle button -->
-
     </header>
-    <a id="menu" href="#">&#9776;</a> <!-- Changed to use the menu icon -->
     <nav>
-        <ul class="navigation">
-            <li><a href="#">Home</a></li>
+        <button id="menu-toggle">☰</button>
+        <ul class="navigation" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Chamber</a></li>
-            <li><a href="#">GitHub Profile</a></li>
-            <li><a href="#">Linkedin</a></li>
+            <li><a href="https://github.com/fernandoludvig/" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/fernando-ludvig-06664a230/" target="_blank">Linkedin</a></li>
         </ul>
     </nav>
 
     <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/hero-smallb.webp" media="(max-width: 400px)">
-                <source srcset="images/hero-mediumb.webp" media="(max-width: 900px)">
-                <img src="images/hero-largeb.webp" alt="Image from Belo Horizonte Temple" loading="lazy" width="500" height="250">
-            </picture>
-        </div>
-        <h1>WDD 230: Web Frontend Development</h1>
-        <hr>
+        <h1>Home</h1>
         <div class="cards">
             <section class="card-learning-activities">
-                <h2 class="head">Learning Activities</h2>
-                <div id="learning-activities"></div> 
+                <h2 class="head">Course Work</h2>
+                <div class="text">
+                    <ul>
+                        <li>Completed: CSE 110, WDD 130, CSE 210, WDD 131</li>
+                        <li>In Progress: CSE 111, WDD 231</li>
+                    </ul>
+                </div>
             </section>
             <section class="card-information">
-                <h2 class="head">Information</h2>
-                <div class="weather-info">
-                    <img id="weather-icon" src="https://openweathermap.org/img/wn/10d.png" alt="Weather Icon">
-                    <p id="temperature">Loading...</p>
-                </div>
-                <div class="text-info">
-                    <p id="weather-description">Fetching weather data...</p>
-                </div>
+                <h2 class="head">Florianópolis, Brazil</h2>
+                <img src="images/Florianopolis.webp" alt="Image of Florianopolis">
+                <p>Praia da Joaquina</p>
             </section>
-
         </div>
-        
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56576.04340854439!2d-48.69376505136724!3d-27.593445499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952749bb3d3415fb%3A0x468c946b1e7294b6!2sA%20Igreja%20de%20Jesus%20Cristo%20dos%20Santos%20dos%20%C3%9Altimos%20Dias!5e0!3m2!1spt-BR!2sbr!4v1715172504877!5m2!1spt-BR!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="main-card">
+            <h2 class="head">Web and Computer Programming Certificate</h2>
+            <ul class="card">
+                <a href="#" data-filter="All">All</a>
+                <a href="#" data-filter="CSE">CSE</a>
+                <a href="#" data-filter="WDD">WDD</a>
+            </ul>
+            <hr>
+            <div id="course-list">
+                <!-- Cursos serão inseridos dinamicamente aqui -->
+            </div>
+            <p class="total-credits">Total Credits: 0</p>
         </div>
     </main>
     <footer>
-        <p id="copyright"></p>
-        <p>The document was last modified on <span id="lastModified"></span>.</p>
+        <p></p>
+        <p></p>
     </footer>
-    <script src="scripts/getDates.js"></script>
-    <script src="scripts/links.js"></script>
-
 </body>
 </html>
