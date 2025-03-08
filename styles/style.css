@@ -213,24 +213,26 @@ li {
   gap: 5px; /* Reduz o espaçamento entre os links */
 }
 
+.card li {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+}
+
 .card a {
-  background-color: black;
-  text-decoration: none; /* Remove o sublinhado */
-  color: white;
-  width: 2%; /* Diminui a largura das caixas */
-  text-align: center; /* Centraliza o texto */
-  padding: 8px; /* Reduz o padding interno */
-  border-radius: 5px; /* Bordas arredondadas */
-  flex: 1; /* Ocupa o espaço disponível igualmente */
-  margin: 0 2px; /* Espaçamento mínimo entre os links */
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
 }
 
 .card a:hover,
 .card a:active {
-  color: white; /* Cor do texto ao passar o mouse */
-  background-color: #3B6E98; /* Cor de fundo ao passar o mouse */
+    background-color: #3B6E98;
 }
-
 /* Estilos para as linhas de cursos */
 .course-row {
   display: flex;
