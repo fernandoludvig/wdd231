@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Mahil",
+        "address": "Rua das Palmeiras, 250, Florianópolis, SC",
+        "phone": "+55 48 99999-9999",
+        "website": "https://www.mahil.com.br",
+        "image": "logo-email.webp",
+        "membership": 3,
+        "description": "Sustainable fashion brand creating handcrafted clothing in Brazil."
+    },
+    {
+        "name": "Floripa Tech Hub",
+        "address": "Av. Beira-Mar Norte, 1050, Florianópolis, SC",
+        "phone": "+55 48 3022-3030",
+        "website": "https://www.floripatechhub.com.br",
+        "image": "hub.png",
+        "membership": 2,
+        "description": "A leading coworking space and incubator for tech startups in Florianópolis."
+    },
+    {
+        "name": "Ilha Gourmet",
+        "address": "Rua Bocaiúva, 678, Florianópolis, SC",
+        "phone": "+55 48 3244-5678",
+        "website": "https://www.ilhagourmet.com.br",
+        "image": "gourmet.jpg",
+        "membership": 3,
+        "description": "Fine dining restaurant specializing in local seafood cuisine."
+    },
+    {
+        "name": "Praia Surf School",
+        "address": "Avenida das Rendeiras, 145, Florianópolis, SC",
+        "phone": "+55 48 99876-5432",
+        "website": "https://www.praiasurfschool.com.br",
+        "image": "surf.jpg",
+        "membership": 1,
+        "description": "Top-rated surf school offering lessons for all levels at the best beaches in Floripa."
+    },
+    {
+        "name": "Floripa Eco Lodge",
+        "address": "Rodovia SC-406, 3000, Florianópolis, SC",
+        "phone": "+55 48 3256-7890",
+        "website": "https://www.floripaecolodge.com.br",
+        "image": "eco.jpg",
+        "membership": 2,
+        "description": "Sustainable eco-lodge with beachfront bungalows and nature retreats."
+    },
+    {
+        "name": "Ludvig Imóveis",
+        "address": "Rua Almirante Lamego, 450, Florianópolis, SC",
+        "phone": "+55 48 3233-1122",
+        "website": "https://www.ludvigimoveis.com.br",
+        "image": "ludvig.webp",
+        "membership": 3,
+        "description": "Agência de imóveis de luxo especializada em propriedades à beira-mar em Santa Catarina."
+    },
+    {
+        "name": "Floripa Fitness Center",
+        "address": "Rua Professor Hermínio Jacques, 75, Florianópolis, SC",
+        "phone": "+55 48 98765-4321",
+        "website": "https://www.floripafitness.com.br",
+        "image": "fitness.webp",
+        "membership": 1,
+        "description": "Modern gym with personalized training, yoga, and functional workouts."
+    }
+]

@@ -1,0 +1,19 @@
+{
+    "family_name": "Ludvig",
+    "move_in": "08/11/2025",
+    "people": 5,
+    "visit": true,
+    "family_members": [
+        {
+        "name": "Fernando",
+        "gender": "Male",
+        "birthdate": "08/11/2004"
+        },
+        {
+        "name": "Marcus",
+        "gender": "Male",
+        "birthdate": "13/08/1973"
+        }
+    ]
+
+}
