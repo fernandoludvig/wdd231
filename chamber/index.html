@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Florianopolis Chamber of Commerce. Supporting local businesses and fostering economic growth.">
+    <meta name="author" content="Fernando Cardoso Ludvig">
+    <title>Florianopolis Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Florianopolis Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fernandoludvig.github.io/wdd231/chamber/images/Florianopolis.webp">
+    <meta property="og:url" content="https://fernandoludvig.github.io/wdd231/chamber/index.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/index.css">
+    
+    <!-- JavaScript -->
+    <script defer src="scripts/index.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Florianopolis Chamber of Commerce</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/Florianopolis.webp" alt="Florianopolis cityscape">
+            <div class="hero-text">
+                <h1>Supporting Local Business Growth</h1>
+                <p>Join the Florianopolis Chamber of Commerce today!</p>
+                <a href="join.html" class="cta-button">Join Now</a>
+            </div>
+        </section>
+
+        <!-- Events & Weather Section -->
+        <div class="events-weather">
+            <!-- Current Events -->
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <p>Stay updated on networking events, workshops, and more.</p>
+                <ul>
+                    <li>March 25: Business Networking Luncheon</li>
+                    <li>April 10: Startup Pitch Night</li>
+                </ul>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather">
+                <h2>Local Weather</h2>
+                <p id="weather-info">Loading weather data...</p>
+                <div id="weather-forecast"></div>
+            </section>
+        </div>
+
+        <!-- Spotlight Section -->
+        <section class="spotlight">
+            <h2>Business Spotlights</h2>
+            <div class="spotlight-container" id="spotlight-container">
+                <!-- Spotlights will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footer-year"></p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
