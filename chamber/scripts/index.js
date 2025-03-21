@@ -24,9 +24,11 @@ fetch(weatherUrl)
 
         // Current Weather
         const current = data.list[0];
+        const description = current.weather[0].description;
+        const formattedDescription = description.charAt(0).toUpperCase() + description.slice(1);
         weatherInfo.innerHTML = `
-            <strong>${current.weather[0].description}</strong><br>
-            Temperature: ${current.main.temp}°C
+        Temperature: ${current.main.temp}°C - 
+        <strong>${formattedDescription}</strong>
         `;
 
         // 3-Day Forecast
