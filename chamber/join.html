@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/join.js"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <h1>Join the Chamber</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="join-container">
+        <form action="thankyou.html" method="get" class="join-form">
+            <h2>Membership Application</h2>
+            
+            <label>
+                First Name: 
+                <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
+            </label>
+            
+            <label>
+                Last Name: 
+                <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
+            </label>
+            
+            <label>
+                Organizational Title: 
+                <input type="text" name="organizationTitle" autocomplete="organization-title" 
+                       pattern="[A-Za-z\-\s]{7,}" title="Enter at least 7 characters, only letters, hyphens, and spaces">
+            </label>
+            
+            <label>
+                Email: 
+                <input type="email" name="email" required autocomplete="email" 
+                       placeholder="example@email.com" title="Enter a valid email">
+            </label>
+            
+            <label>
+                Mobile Phone: 
+                <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile number">
+            </label>
+            
+            <label>
+                Business Name: 
+                <input type="text" name="businessName" required autocomplete="organization" title="Enter your business name">
+            </label>
+            
+            <label>
+                Membership Level:
+                <select name="membership" required>
+                    <option value="">Select a level</option>
+                    <option value="NP">Non-Profit Membership (Free)</option>
+                    <option value="Bronze">Bronze Membership ($100/year)</option>
+                    <option value="Silver">Silver Membership ($250/year)</option>
+                    <option value="Gold">Gold Membership ($500/year)</option>
+                </select>
+            </label>
+            
+            <label>
+                Business Description: 
+                <textarea name="description" title="Describe your business"></textarea>
+            </label>
+            
+            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="submit" value="Submit Application" class="submit-btn">
+        </form>
+        
+        <section class="membership-cards">
+            <div class="membership-card" id="np-card">
+                <h3>Non-Profit Membership</h3>
+                <p>Free for non-profit organizations</p>
+                <button onclick="openModal('NP')">Learn More</button>
+            </div>
+            
+            <div class="membership-card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <p>$100/year</p>
+                <button onclick="openModal('Bronze')">Learn More</button>
+            </div>
+            
+            <div class="membership-card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <p>$250/year</p>
+                <button onclick="openModal('Silver')">Learn More</button>
+            </div>
+            
+            <div class="membership-card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <p>$500/year</p>
+                <button onclick="openModal('Gold')">Learn More</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal container (content will be injected by JavaScript) -->
+    <div id="modal-container"></div>
+    
+    <footer>
+        <p id="footer-year"></p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
