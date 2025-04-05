@@ -1,0 +1,22 @@
+/* Início de uma regra de mídia (media query)
+   Essa regra só será aplicada se a largura da tela for de no mínimo 38rem (~608px)
+   Isso é útil para adaptar o layout em telas maiores, como tablets ou desktops */
+   @media only screen and (min-width: 38rem) {
+
+    /* Estiliza os <div> de #allplaces somente quando a condição da media query for verdadeira */
+    #allplaces div {
+        /* Redefine o layout do grid para 2 colunas:
+           - A imagem ocupa a primeira coluna (linha inteira à esquerda)
+           - Os textos ficam ao lado (coluna da direita), cada um em sua linha
+        */
+        grid-template-areas: 
+            "photo name"
+            "photo description"
+            "photo address";
+    }
+
+    /* Estiliza a imagem do lugar quando estiver em uma tela >= 38rem */
+    #allplaces div img {
+        width: 300px; /* Define uma largura fixa para a imagem (fica ao lado do texto) */
+    }
+}

@@ -33,4 +33,4 @@ const displayProphets = (prophets) => {
 
         cards.appendChild(card); // Append the card to the #cards container
     }); // end of arrow function and forEach loop
-}
+} 

@@ -1,0 +1,20 @@
+/* Início de uma media query:
+   Aplica os estilos somente se a tela tiver no mínimo 64rem de largura (~1024px),
+   ou seja, em telas grandes como notebooks e desktops */
+   @media only screen and (min-width: 64rem) {
+
+    /* Seleciona o contêiner com ID 'allplaces' */
+    #allplaces {
+        display: grid; /* Define o layout do contêiner como grid */
+        
+        /* Cria duas colunas de mesmo tamanho dentro do grid.
+           Cada coluna ocupará uma fração igual do espaço disponível (1fr = 1 parte do total) */
+        grid-template-columns: 1fr 1fr;
+    }
+    #allplaces div img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+}

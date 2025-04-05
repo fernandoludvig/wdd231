@@ -8,8 +8,12 @@ const lastModifiedDate = document.lastModified;
 const footerYear = document.getElementById('footer-year');
 const lastModifiedParagraph = document.getElementById('last-modified');
 
-footerYear.textContent = `© ${currentYear} Florianopolis Chamber of Commerce`;
-lastModifiedParagraph.textContent = `Last Update: ${lastModifiedDate}`;
+if (footerYear) {
+    footerYear.textContent = `© ${currentYear} Florianopolis Chamber of Commerce`;
+}
+if (lastModifiedParagraph) {
+    lastModifiedParagraph.textContent = `Last Update: ${lastModifiedDate}`;
+}
 
 // OpenWeatherMap API
 const apiKey = '09f41b3700b1f5ec16123b2e3e4bddb6'; // Replace with your OpenWeatherMap API key
@@ -23,61 +27,67 @@ fetch(weatherUrl)
         const weatherForecast = document.getElementById('weather-forecast');
 
         // Current Weather
-        const current = data.list[0];
-        const description = current.weather[0].description;
-        const formattedDescription = description.charAt(0).toUpperCase() + description.slice(1);
-        weatherInfo.innerHTML = `
-        Temperature: ${current.main.temp}°C - 
-        <strong>${formattedDescription}</strong>
-        `;
+        if (weatherInfo) {
+            const current = data.list[0];
+            const description = current.weather[0].description;
+            const formattedDescription = description.charAt(0).toUpperCase() + description.slice(1);
+            weatherInfo.innerHTML = `
+            Temperature: ${current.main.temp}°C - 
+            <strong>${formattedDescription}</strong>
+            `;
+        }
 
         // 3-Day Forecast
-        for (let i = 1; i <= 3; i++) {
-            const forecast = data.list[i * 8]; // Approximate daily forecast
-            weatherForecast.innerHTML += `
-                <p>Day ${i}: ${forecast.main.temp}°C</p>
-            `;
+        if (weatherForecast) {
+            for (let i = 1; i <= 3; i++) {
+                const forecast = data.list[i * 8]; // Approximate daily forecast
+                weatherForecast.innerHTML += `
+                    <p>Day ${i}: ${forecast.main.temp}°C</p>
+                `;
+            }
         }
     })
     .catch(error => console.error('Error fetching weather data:', error));
 
-    const members = [
-        {
-            name: 'Mahil',
-            logo: 'images/logo-email.webp',
-            phone: '(48) 1234-5678',
-            address: 'Rua das Palmeiras, 250, Florianópolis, SC',
-            website: 'https://www.mahil.com.br',
-            level: 'Gold'
-        },
-        {
-            name: 'Ilha Gourmet',
-            logo: 'images/gourmet.jpg',
-            phone: '(48) 9876-5432',
-            address: 'Rua Bocaiúva, 678, Florianópolis, SC',
-            website: 'https://www.ilhagourmet.com.br/',
-            level: 'Silver'
-        },
-        {
-            name: 'Praia Surf School',
-            logo: 'images/surf.jpg',
-            phone: '(48) 4567-8901',
-            address: 'Avenida das Rendeiras, 145, Florianópolis, SC',
-            website: 'https://www.praiasurfschool.com.br/',
-            level: 'Gold'
-        },
-        {
-            name: "Ludvig Imóveis",
-            logo: "images/ludvig.webp",
-            phone: "+55 48 3233-1122",
-            address: "Rua Almirante Lamego, 450, Florianópolis, SC",
-            website: "https://www.ludvigimoveis.com.br",
-            level: 'Gold'
-    }];
-    
-    // Randomly select 2-3 Gold or Silver members
-    const spotlightContainer = document.getElementById('spotlight-container');
-    
+const members = [
+    {
+        name: 'Mahil',
+        logo: 'images/logo-email.webp',
+        phone: '(48) 1234-5678',
+        address: 'Rua das Palmeiras, 250, Florianópolis, SC',
+        website: 'https://www.mahil.com.br',
+        level: 'Gold'
+    },
+    {
+        name: 'Ilha Gourmet',
+        logo: 'images/gourmet.jpg',
+        phone: '(48) 9876-5432',
+        address: 'Rua Bocaiúva, 678, Florianópolis, SC',
+        website: 'https://www.ilhagourmet.com.br/',
+        level: 'Silver'
+    },
+    {
+        name: 'Praia Surf School',
+        logo: 'images/surf.jpg',
+        phone: '(48) 4567-8901',
+        address: 'Avenida das Rendeiras, 145, Florianópolis, SC',
+        website: 'https://www.praiasurfschool.com.br/',
+        level: 'Gold'
+    },
+    {
+        name: "Ludvig Imóveis",
+        logo: "images/ludvig.webp",
+        phone: "+55 48 3233-1122",
+        address: "Rua Almirante Lamego, 450, Florianópolis, SC",
+        website: "https://www.ludvigimoveis.com.br",
+        level: 'Gold'
+    }
+];
+
+// Randomly select 2-3 Gold or Silver members
+const spotlightContainer = document.getElementById('spotlight-container');
+
+if (spotlightContainer) {
     // Filter for Gold or Silver members
     const eligibleMembers = members.filter(member => member.level === 'Gold' || member.level === 'Silver');
     
@@ -98,3 +108,4 @@ fetch(weatherUrl)
             </article>
         `;
     });
+}
