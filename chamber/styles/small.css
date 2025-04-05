@@ -92,10 +92,11 @@
     transition: background-color 0.3s;
 
 }
-
-
-
 /* Quando o mouse passa sobre o botão "Learn More" */
 .learn-more:hover {
     background-color: #2980b9; /* Muda o fundo para um azul mais escuro */
+}
+
+h1 {
+    text-align: center;
 }
