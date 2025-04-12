@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Soccer Community Hub | Home</title>
+    <meta name="description" content="Connect with local soccer players, organize pick-up games, and find game schedules in your community.">
+    <meta property="og:title" content="Local Soccer Community Hub">
+    <meta property="og:description" content="Connect with local soccer players and find games in your area.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourusername.github.io/wdd231/soccer-hub/images/soccer-field.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/soccer-hub">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(max-width: 1024px)">
+    <link rel="stylesheet" href="styles/small.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="styles/large.css"> 
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script type="module" src="script/script.js"></script>
+    <script type="module" src="script/games.js"></script>
+    <script type="module" src="script/weather.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Local Soccer Community Hub</h1>
+        <button id="menu-toggle">☰</button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Game Schedule</a></li>
+            <li><a href="players.html">Player Directory</a></li>
+          </ul>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <section id="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/field.jpeg">
+                <source media="(min-width: 601px)" srcset="images/field.jpeg">
+                <img src="images/field.jpeg" alt="Soccer field with players" loading="lazy">
+            </picture>
+            <div class="hero-text">
+                <h2>Find Your Game</h2>
+                <p>Connect with local players and join matches in your area</p>
+                <!-- ✅ Botão movido aqui -->
+                <button id="open-modal" type="button">Join a Game</button>
+            </div>
+        </section>
+    
+        <div id="visit-message"></div> <!-- Adicionei esta div para a mensagem de visita -->
+        <div id="allplaces"></div> <!-- Mudei para que o conteúdo vá diretamente aqui -->        
+        <dialog id="mydialog">
+            <div id="dialogtext"></div>
+            <button id="dialog-close">Close</button>
+          </dialog>
+          
+          <section id="weather">
+            <h2>Game Day Weather</h2>
+            <div class="weather-box" id="current-weather"></div>
+            <div class="weather-box" id="tomorrow-weather"></div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Local Soccer Community Hub</p>
+        <p id="last-modified"></p>
+        <a href="attributions.html">Attributions</a>
+    </footer>
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" tabindex="0" aria-label="Close modal">&times;</span>
+            <h2>Join a Game</h2>
+            <form id="join-form" action="form-action.html" method="get">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="position">Preferred Position:</label>
+                <select id="position" name="position" required>
+                    <option value="">Select Position</option>
+                    <option value="Goalkeeper">Goalkeeper</option>
+                    <option value="Defender">Defender</option>
+                    <option value="Midfielder">Midfielder</option>
+                    <option value="Forward">Forward</option>
+                </select>
+
+                <label for="skill">Skill Level:</label>
+                <select id="skill" name="skill" required>
+                    <option value="">Select Skill Level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

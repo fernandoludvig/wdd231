@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Soccer Community Hub | Game Schedule</title>
+  <meta name="description" content="View upcoming soccer games and events in your local community." />
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/medium.css" media="(max-width: 1024px)">
+  <link rel="stylesheet" href="styles/small.css" media="(max-width: 768px)">
+  <link rel="stylesheet" href="styles/large.css"> 
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script src="script/schedule.js" type="module"></script>
+  <script type="module" src="script/script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Local Soccer Community Hub</h1>
+        <button id="menu-toggle">☰</button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Game Schedule</a></li>
+            <li><a href="players.html">Player Directory</a></li>
+          </ul>
+        </nav>
+        
+    </header>
+
+  <main>
+    <h2>Upcoming Games</h2>
+    <div id="schedule-filters">
+      <label for="location-filter">Filter by Location:</label>
+      <select id="location-filter">
+        <option value="all">All Locations</option>
+        <option value="F10 Arena">F10 Arena</option>
+        <option value="Floripa Soccer">Floripa Soccer</option>
+        <option value="Arena Granvitá">Arena Granvitá</option>
+        <option value="Show de Bola">Show de Bola</option>
+        <option value="Arena B12">Arena B12</option>
+        <option value="Golaço Floripa">Golaço Floripa</option>
+        <option value="P&K Esporte e Lazer">P&K Esporte e Lazer</option>
+        <option value="AABB Florianópolis">AABB Florianópolis</option>
+      </select>
+
+      <label for="date-filter">Filter by Date:</label>
+      <input type="date" id="date-filter" />
+
+      <button id="apply-filters" class="button">Apply Filters</button>
+      <button id="reset-filters" class="button secondary">Reset</button>
+    </div>
+
+    <div id="upcoming-games" class="grid-container"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Local Soccer Community Hub</p>
+    <p id="last-modified"></p>
+    <a href="attributions.html">Attributions</a>
+  </footer>

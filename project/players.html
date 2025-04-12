@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Soccer Community Hub | Player Directory</title>
+    <meta name="description" content="Browse our directory of local soccer players and connect with teammates.">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(max-width: 1024px)">
+    <link rel="stylesheet" href="styles/small.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="styles/large.css"> 
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Local Soccer Community Hub</h1>
+        <button id="menu-toggle">☰</button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Game Schedule</a></li>
+            <li><a href="players.html">Player Directory</a></li>
+          </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <h2>Player Directory</h2>
+        <div id="player-search">
+            <input type="text" id="search-input" placeholder="Search players...">
+            <button id="search-button">Search</button>
+        </div>
+        <div id="players-list" class="grid-container"></div>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Local Soccer Community Hub</p>
+        <p id="last-modified"></p>
+        <a href="attributions.html">Attributions</a>
+    </footer>
+    <script type="module" src="script/players.js"></script>
+</body>
+
+</html>

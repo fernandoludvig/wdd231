@@ -1,0 +1,67 @@
+/* ===========================
+   NAVEGAÇÃO RESPONSIVA - MOBILE
+=========================== */
+nav {
+    background: transparent; /* Remove o background padrão */
+    padding: 0; /* Remove o padding padrão */
+  }
+  
+  #menu-toggle {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    background: var(--secondary-color); /* Background só aparece quando menu está aberto */
+    margin-top: 0.5rem;
+  }
+  
+  nav ul.show {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  /* ===========================
+     LAYOUT DE CARDS - MOBILE
+  =========================== */
+  #allplaces {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* ===========================
+     HERO SECTION - MOBILE
+  =========================== */
+  .hero-text {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    background-color: rgba(86, 139, 86, 0.9);
+  }
+  
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
